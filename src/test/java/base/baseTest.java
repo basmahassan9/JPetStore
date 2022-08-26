@@ -26,7 +26,7 @@ public class baseTest {
 
     @BeforeMethod
     public void goHome(){
-        driver.get("https://the-internet.herokuapp.com/");
+        driver.get("https://petstore.octoperf.com/actions/Catalog.action");
     }
 
     @AfterClass

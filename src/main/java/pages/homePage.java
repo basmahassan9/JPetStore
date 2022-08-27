@@ -2,6 +2,10 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 public class homePage {
     private WebDriver driver;
@@ -21,6 +25,11 @@ public class homePage {
 
     public String getResult(){
         return driver.findElement(By.xpath("//tr//td[3]")).getText();
+    }
+
+    public fishPage categoriesClick(){
+        driver.findElements(By.cssSelector("div#SidebarContent a img")).get(0).click();
+        return new fishPage(driver);
     }
 
 }
